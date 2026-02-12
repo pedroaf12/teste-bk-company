@@ -7,21 +7,18 @@ const router = Router()
 
 const schema = z.object({
   id: z.string(),
-  name: z.string()
+  name: z.string(),
+  price: z.number().nonnegative()
 })
 
 /**
  * Criar produto
  */
 router.post("/", (req, res) => {
-
   const data = schema.parse(req.body)
-
-  productRepository.create(
-    new Product(data.id, data.name)
-  )
-
-  res.status(201).send()
+  const product = new Product(data.id, data.name, data.price)
+  productRepository.create(product)
+  res.status(201).json(product)
 })
 
 /**

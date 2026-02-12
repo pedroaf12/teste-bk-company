@@ -1,11 +1,17 @@
 import express from "express";
-
+import cors from "cors";
 import productRoutes from "./infra/http/routes/product.routes";
 import orderRoutes from "./infra/http/routes/order.routes";
 import dashboardRoutes from "./infra/http/routes/dashboard.routes";
 import productCostRoutes from "./infra/http/routes/product-cost.routes";
 
 const app = express();
+
+// Configurar CORS
+app.use(cors({
+  origin: 'http://localhost:3001', // URL do frontend
+  credentials: true
+}));
 
 app.use(express.json());
 
