@@ -10,6 +10,9 @@ const schema = z.object({
   name: z.string()
 })
 
+/**
+ * Criar produto
+ */
 router.post("/", (req, res) => {
 
   const data = schema.parse(req.body)
@@ -19,6 +22,16 @@ router.post("/", (req, res) => {
   )
 
   res.status(201).send()
+})
+
+/**
+ * Listar produtos
+ */
+router.get("/", (req, res) => {
+
+  const products = productRepository.findAll()
+
+  res.json(products)
 })
 
 export default router

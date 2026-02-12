@@ -4,6 +4,9 @@ import { orderRepository } from "../../container"
 
 const router = Router()
 
+/**
+ * Webhook
+ */
 router.post("/webhook", (req, res) => {
 
   const order = OrderWebhookMapper.toDomain(req.body)
@@ -11,6 +14,16 @@ router.post("/webhook", (req, res) => {
   orderRepository.create(order)
 
   res.status(201).send()
+})
+
+/**
+ * Listar pedidos
+ */
+router.get("/", (req, res) => {
+
+  const orders = orderRepository.findAll()
+
+  res.json(orders)
 })
 
 export default router
