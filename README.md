@@ -269,22 +269,6 @@ curl -X POST http://localhost:3000/orders/webhook \
 }
 ```
 
-## 🤝 Contribuindo
-
-1. Fork o projeto
-2. Crie sua feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto é parte de um teste técnico para a BK Company.
-
-## 👨‍💻 Autor
-
-Desenvolvido como parte do processo seletivo BK Company.
-
----
+<img width="1194" height="855" alt="dashboard" src="https://github.com/user-attachments/assets/b5bda2ca-ff8e-47c1-baef-8e457e647298" />
 
 ⭐ **Dica**: Para popular o sistema rapidamente, use o script de testes incluído no projeto!
